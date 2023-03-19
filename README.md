@@ -8,4 +8,8 @@ Motivation and main idea: (a) illustrates the significant emotion recognition di
 
 <img src="figure2.png" width="90%"></img>
 
-The framework of DMD. Given the input multimodal data, DMD encodes their respective shallow features $\widetilde{\mathbf{X}}_{m}$, where $m \in \{L, V, A\}$. In feature decoupling, DMD exploits the decoupled homo-/heterogeneous multimodal features $\mathbf{X}^{\text{com}}_{m}$ / $\mathbf{X}^{\text{prt}}_{m}$ via the shared and exclusive encoders, respectively. $\mathbf{X}^{\text{prt}}_{m}$ will be reconstructed in a self-regression manner.
+The framework of DMD. Given the input multimodal data, DMD encodes their respective shallow features $\widetilde{\mathbf{X}}\_{m}$, where $m \in \{L, V, A\}$. In feature decoupling, DMD exploits the decoupled homo-/heterogeneous multimodal features $\mathbf{X}^{\text{com}}\_{m}$ / $\mathbf{X}^{\text{prt}}\_{m}$ via the shared and exclusive encoders, respectively. $\mathbf{X}^{\text{prt}}\_{m}$ will be reconstructed in a self-regression manner. Subsequently, $\mathbf{X}^{\text{com}}\_{m}$ will be fed into a GD-Unit for adaptive knowledge distillation in HomoGD. In HeteroGD, $\mathbf{X}^{\text{prt}}\_{m}$ are reinforced to $\mathbf{Z}^{\text{prt}}\_{\to m}$ via multimodal transformers to bridge the distribution gap. The GD-Unit in HeteroGD takes $\mathbf{Z}^{\text{prt}}\_{\to m}$ as input for distillation. Finally, $\mathbf{X}^{\text{com}}\_{m}$ and $\mathbf{Z}^{\text{prt}}\_{\to m}$ will be adaptively fused for MER. 
+
+<img src="edge.png" width="90%"></img>
+
+Illustration of the graph edges in HomoGD and HeteroGD. In (a), $L \to A$ and $L \to V$ are dominated because the homogeneous language features contribute most and the other modalities perform poorly. In (b), $L \to A$, $L \to V$, and $V \to A$ are dominated.  $V \to A$ emerges because the visual modality enhanced its feature discriminability via the multimodal transformer mechanism in HeteroGD.
