@@ -1,9 +1,11 @@
-### Decoupled Multimodal Distilling for Emotion Recognition, CVPR 2022 
+### Decoupled Multimodal Distilling for Emotion Recognition, CVPR 2023
 
 Human multimodal emotion recognition (MER) aims to perceive human emotions via language, visual and acoustic modalities. Despite the impressive performance of previous MER approaches, the inherent multimodal heterogeneities still haunt and the contribution of different modalities varies significantly. We propose a decoupled multimodal distillation (DMD) approach that facilitates flexible and adaptive crossmodal knowledge distillation. Specially, the representation of each modality is decoupled into two parts, i.e., modality-irrelevant/-exclusive spaces. DMD utilizes a graph distillation unit (GD-Unit) for each decoupled part so that each GD can be performed in a more specialized and effective manner. A GD-Unit consists of a dynamic graph where each vertice represents a modality and each edge indicates a dynamic knowledge distillation. Such GD paradigm provides a flexible knowledge transfer manner where the distillation weights can be automatically learned, thus enabling diverse crossmodal knowledge transfer patterns.
 
-![]<img src="figure_1.png" width="50%"></img>
+<img src="figure_1.png" width="50%"></img>
+
 Motivation and main idea: (a) illustrates the significant emotion recognition discrepancies using unimodality, adapted from [Mult]([https://github.com/NVlabs/ffhq-dataset](https://github.com/yaohungt/Multimodal-Transformer)). (b) shows the conventional cross-modal distillation. (c) shows our proposed DMD.
 
-![]<img src="figure2.png" width="70%"></img>
-The framework of DMD.
+<img src="figure2.png" width="90%"></img>
+
+The framework of DMD. Given the input multimodal data, DMD encodes their respective shallow features $\widetilde{\mathbf{X}}_{m}$, where $m \in \{L, V, A\}$. In feature decoupling, DMD exploits the decoupled homo-/heterogeneous multimodal features $\mathbf{X}^{\text{com}}_{m}$ / $\mathbf{X}^{\text{prt}}_{m}$ via the shared and exclusive encoders, respectively. $\mathbf{X}^{\text{prt}}_{m}$ will be reconstructed in a self-regression manner.
