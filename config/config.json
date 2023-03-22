@@ -1,0 +1,98 @@
+{
+  "datasetCommonParams": {
+    "dataset_root_dir": "./dataset",
+    "mosi": {
+      "aligned": {
+        "featurePath": "MOSI/Processed/aligned_50.pkl",
+        "feature_dims": [768, 5, 20],
+        "train_samples": 1284,
+        "num_classes": 3,
+        "language": "en",
+        "KeyEval": "Loss"
+      },
+      "unaligned": {
+        "featurePath": "MOSI/Processed/unaligned_50.pkl",
+        "feature_dims": [768, 5, 20],
+        "train_samples": 1284,
+        "num_classes": 3,
+        "language": "en",
+        "KeyEval": "Loss"
+      }
+    },
+    "mosei": {
+      "aligned": {
+        "featurePath": "MOSEI/Processed/aligned_50.pkl",
+        "feature_dims": [768, 74, 35],
+        "train_samples": 16326,
+        "num_classes": 3,
+        "language": "en",
+        "KeyEval": "Loss"
+      },
+      "unaligned": {
+        "featurePath": "MOSEI/Processed/unaligned_50.pkl",
+        "feature_dims": [768, 74, 35],
+        "train_samples": 16326,
+        "num_classes": 3,
+        "language": "en",
+        "KeyEval": "Loss"
+      }
+    }
+  },
+  "dmd": {
+    "commonParams": {
+      "need_data_aligned": true,
+      "need_model_aligned": true,
+      "early_stop": 10,
+      "use_bert": true,
+      "use_finetune": true,
+      "attn_mask": true,
+      "update_epochs": 10
+    },
+    "datasetParams": {
+      "mosi": {
+        "attn_dropout_a": 0.2,
+        "attn_dropout_v": 0.0,
+        "relu_dropout": 0.0,
+        "embed_dropout": 0.2,
+        "res_dropout": 0.0,
+        "dst_feature_dim_nheads": [50, 10],
+        "batch_size": 16,
+        "learning_rate": 0.0001,
+        "nlevels": 4,
+        "conv1d_kernel_size_l": 5,
+        "conv1d_kernel_size_a": 5,
+        "conv1d_kernel_size_v": 5,
+        "text_dropout": 0.5,
+        "attn_dropout": 0.3,
+        "output_dropout": 0.5,
+        "grad_clip": 0.6,
+        "patience": 5,
+        "weight_decay": 0.005,
+        "transformers": "bert",
+        "pretrained": "bert-base-uncased"
+      },
+      "mosei": {
+        "attn_dropout_a": 0.0,
+        "attn_dropout_v": 0.0,
+        "relu_dropout": 0.0,
+        "embed_dropout": 0.0,
+        "res_dropout": 0.0,
+        "dst_feature_dim_nheads": [30, 6],
+        "batch_size": 16,
+        "learning_rate": 0.0001,
+        "nlevels": 4,
+        "conv1d_kernel_size_l": 5,
+        "conv1d_kernel_size_a": 1,
+        "conv1d_kernel_size_v": 3,
+        "text_dropout": 0.3,
+        "attn_dropout": 0.4,
+        "output_dropout": 0.5,
+        "grad_clip": 0.6,
+        "patience": 5,
+        "weight_decay": 0.001,
+        "transformers": "bert",
+        "pretrained": "bert-base-uncased"
+      }
+    }
+  }
+  }
