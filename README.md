@@ -1,4 +1,4 @@
-# Decoupled Multimodal Distilling for Emotion Recognition, CVPR 2023
+# Decoupled Multimodal Distilling for Emotion Recognition, CVPR 2023, Highlight paper (10% of accepted papers)
 
 ![](https://img.shields.io/badge/Platform-PyTorch-blue)
 ![](https://img.shields.io/badge/Language-Python-{green}.svg)
@@ -33,17 +33,35 @@ Illustration of the graph edges in HomoGD and HeteroGD. In (a), $L \to A$ and $L
 - CUDA 11.4
 
 ### Datasets
-Data files (containing processed MOSI, MOSEI datasets) can be downloaded from [here](https://drive.google.com/drive/folders/1BBadVSptOe4h8TWchkhWZRLJw8YG_aEi?usp=sharing).
+Data files (containing processed MOSI, MOSEI datasets) can be downloaded from [here](https://drive.google.com/drive/folders/1BBadVSptOe4h8TWchkhWZRLJw8YG_aEi?usp=sharing). 
+You can put the downloaded datasets into `./dataset` directory.
 Please note that the meta information and the raw data are not available due to privacy of Youtube content creators. For more details, please follow the [official website](https://github.com/A2Zadeh/CMU-MultimodalSDK) of these datasets.
 
 ### Run the Codes
+- Training
+
+First, you need to set the necessary parameters in the `./config/config.json`. Then, you can select the training dataset in `train.py`.
+Training the model as below:
+```
+python train.py
+```
+By default, the trained model will be saved in `./pt` directory. You can change this in `train.py`.
+
+- Testing
+
+Testing the trained model as below:
+```
+python test.py
+```
+Please set the path of trained model in `run.py` (line 174). We also provide some pretrained models for testing. ([Google drive](https://drive.google.com/drive/folders/1swNVrVl05JOzXFomAZ2mhzbIzhc8bqYu?usp=sharing))
+
 
 ### Citation
 If you find the code helpful in your resarch or work, please cite the following paper.
 ```
 @inproceedings{DMD,
   title={Decoupled Multimodal Distilling for Emotion Recognition},
-  author={Yong Li and Yuanzhi Wang and Zhen Cui},
+  author={Li, Yong and Wang, Yuanzhi and Cui, Zhen},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2023}
 }
