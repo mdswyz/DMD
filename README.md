@@ -1,4 +1,4 @@
-# Decoupled Multimodal Distilling for Emotion Recognition, CVPR 2023, Highlight paper (10% of accepted papers)
+# Decoupled Multimodal Distilling for Emotion Recognition, CVPR 2023, hightlight paper (10% of accepted papers, 2.5% of submissions)
 
 ![](https://img.shields.io/badge/Platform-PyTorch-blue)
 ![](https://img.shields.io/badge/Language-Python-{green}.svg)
