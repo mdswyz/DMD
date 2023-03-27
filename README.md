@@ -18,9 +18,9 @@ In general,  the proposed GD paradigm provides a flexible knowledge transfer man
 <div align=center><img src="figure_1.png" width="50%"></img></div>
 
 Motivation and main idea: 
-- illustrates the significant emotion recognition discrepancies using unimodality, adapted from [Mult](https://github.com/yaohungt/Multimodal-Transformer). 
-- shows the conventional cross-modal distillation. 
-- shows our proposed DMD.
+- (a) illustrates the significant emotion recognition discrepancies using unimodality, adapted from [Mult](https://github.com/yaohungt/Multimodal-Transformer). 
+- (b) shows the conventional cross-modal distillation. 
+- (c) shows our proposed DMD.
 
 ## The Framework.
 ![](figure2.png)
