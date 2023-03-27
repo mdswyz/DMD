@@ -1,27 +1,30 @@
 # Decoupled Multimodal Distilling for Emotion Recognition, CVPR 2023. 
 
-# Highlight paper (10% of accepted papers, 2.5% of submissions)
+## ***Highlight paper (10% of accepted papers, 2.5% of submissions)***
 
 ![](https://img.shields.io/badge/Platform-PyTorch-blue)
 ![](https://img.shields.io/badge/Language-Python-{green}.svg)
 ![](https://img.shields.io/npm/l/express.svg)
 
 We propose a decoupled multimodal distillation (DMD) approach that facilitates flexible and adaptive crossmodal knowledge distillation. The key ingredients includes:
-- The representation of each modality is decoupled into two parts, i.e., modality-irrelevant/-exclusive spaces. 
-- We utilizes a graph distillation unit (GD-Unit) for each decoupled part so that each knowledge distillation can be performed in a specialized and effective manner.
-- A GD-Unit consists of a dynamic graph where each vertice represents a modality and each edge indicates a dynamic knowledge distillation. 
+- The representation of each modality is decoupled into two parts, i.e., modality-**irrelevant/-exclusive** spaces. 
+- We utilizes a **graph distillation unit** (GD-Unit) for each decoupled part so that each knowledge distillation can be performed in a specialized and effective manner.
+- A GD-Unit consists of a dynamic graph where each **vertice** represents a **modality** and each **edge** indicates a dynamic knowledge **distillation**. 
 
-In general,  the proposed GD paradigm provides a flexible knowledge transfer manner where the distillation weights can be automatically learned, thus enabling diverse crossmodal knowledge transfer patterns.
+In general,  the proposed GD paradigm provides a flexible knowledge transfer manner where the **distillation weights** can be automatically learned, thus enabling **diverse crossmodal knowledge transfer** patterns.
 
 
 ## The motivation.
 <div align=center><img src="figure_1.png" width="50%"></img></div>
 
-Motivation and main idea: (a) illustrates the significant emotion recognition discrepancies using unimodality, adapted from [Mult](https://github.com/yaohungt/Multimodal-Transformer). (b) shows the conventional cross-modal distillation. (c) shows our proposed DMD.
+Motivation and main idea: 
+- illustrates the significant emotion recognition discrepancies using unimodality, adapted from [Mult](https://github.com/yaohungt/Multimodal-Transformer). 
+- shows the conventional cross-modal distillation. 
+- shows our proposed DMD.
 
 ## The Framework.
 ![](figure2.png)
-The framework of DMD.
+The framework of DMD. Please refer to [Paper Link](https://arxiv.org/abs/2303.13802) for details.
 
 ## The learned graph edges.
 ![](edge.png)
