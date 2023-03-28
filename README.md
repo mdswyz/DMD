@@ -1,4 +1,4 @@
-# Decoupled Multimodal Distilling for Emotion Recognition, CVPR 2023. 
+# [Decoupled Multimodal Distilling for Emotion Recognition](https://arxiv.org/abs/2303.13802), CVPR 2023. 
 
 ## ***Highlight paper (10% of accepted papers, 2.5% of submissions)***
 
