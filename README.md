@@ -64,11 +64,13 @@ Please set the path of trained model in `run.py` (line 174). We also provide som
 ### Citation
 If you find the code helpful in your resarch or work, please cite the following paper.
 ```
-@inproceedings{DMD,
-  title={Decoupled Multimodal Distilling for Emotion Recognition},
-  author={Li, Yong and Wang, Yuanzhi and Cui, Zhen},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2023}
+@InProceedings{Li_2023_CVPR,
+    author    = {Li, Yong and Wang, Yuanzhi and Cui, Zhen},
+    title     = {Decoupled Multimodal Distilling for Emotion Recognition},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023},
+    pages     = {6631-6640}
 }
 ```
 
